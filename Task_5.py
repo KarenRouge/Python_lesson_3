@@ -1,24 +1,14 @@
-numbers = list(input("Введите числа через пробел: ").split())
-
-try:
+def sum():
     x = 0
-    sum0 = 0
-    sum1 = sum0
-    ncount = int(len(numbers))
-        while x < ncount:
-            sum1 = int(numbers[x]) + int(numbers[x + 1]) + sum0
-            sum0 = sum1
-            x = x + 1
-            print("Сумма равна: ", sum1)
-except NameError:
-    numbers.index(x) == "Q":
-    print("Операция завершена. Сумма: ", sum1)
+    while True:
+        numbers = input("Введите числа через пробел. Для выхода нажмите 'q':").split()
+        for i in numbers:
+            if i == 'q':
+                return x
+            else:
+                x += int(i)
+
+        print("Сумма введенных чисел: ", x)
 
 
-
-
-
-
-
-
-
+print(sum())
